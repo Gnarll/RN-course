@@ -38,10 +38,10 @@ const ListScreen = () => {
       keyExtractor={(friend) => friend.name}
       data={friends}
       showsVerticalScrollIndicator={false}
-      renderItem={(element) => {
+      renderItem={({ item, index }) => {
         return (
           <Text style={styles.TextStyle}>
-            {element.item.name} - age: {element.item.age}
+            {item.name} - age: {item.age}
           </Text>
         );
       }}
@@ -50,7 +50,7 @@ const ListScreen = () => {
 };
 
 const styles = StyleSheet.create({
-  TextStyle: { marginVertical: 50 },
+  TextStyle: { marginVertical: 50, fontSize: 20 },
 });
 
 export default ListScreen;

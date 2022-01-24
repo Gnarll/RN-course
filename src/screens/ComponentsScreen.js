@@ -13,10 +13,12 @@ const ComponentsScreen = () => {
 
 const styles = StyleSheet.create({
   textStyle: {
-    fontSize: 45,
+    fontSize: 40,
   },
   subTextStyle: {
     fontSize: 20,
+    alignSelf: "center",
+    marginVertical: 10,
   },
 });
 
