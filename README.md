@@ -1,1 +1,1 @@
-# RN-course
+# The Complete React Native + Hooks Course
