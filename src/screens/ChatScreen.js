@@ -61,11 +61,10 @@ const ChatScreen = () => {
 
   const scroll = useRef(null);
 
-  console.log(isWaiting);
-
   return (
     <View>
       <ScrollView
+        contentContainerStyle={{ paddingBottom: 10 }}
         style={styles.chat}
         ref={scroll}
         onContentSizeChange={() =>
@@ -82,6 +81,17 @@ const ChatScreen = () => {
                 }`,
                 fontSize: 20,
                 marginVertical: 5,
+                marginHorizontal: 10,
+                backgroundColor: "rgba(50, 175, 275, 0.3)",
+                padding: 5,
+                borderTopLeftRadius: 10,
+                borderTopRightRadius: 10,
+                borderBottomLeftRadius: Number(
+                  `${message.name === "You" ? 0 : 10}`
+                ),
+                borderBottomRightRadius: Number(
+                  `${message.name === "You" ? 10 : 0}`
+                ),
               }}
             >
               {message.name}: {message.msg}
@@ -121,7 +131,6 @@ const styles = StyleSheet.create({
   chat: {
     marginTop: 10,
     marginBottom: 5,
-    padding: 5,
     alignSelf: "center",
     height: 500,
     width: "95%",
@@ -141,6 +150,7 @@ const styles = StyleSheet.create({
     borderColor: "blue",
     borderWidth: 4,
     borderRadius: 10,
+    alignSelf: "center",
   },
 });
 
